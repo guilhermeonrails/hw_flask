@@ -17,9 +17,10 @@ que, por sua vez, permite localizar outros arquivos que fazem parte do
 aplicativo, como imagens e modelos
 """
 
-@app.route("/")
 def index():
-    return "Olá Mundo!"
+    return '<h1>Hello World!</h1>'
+
+app.add_url_rule('/', 'index', index)
 
 """
 Clientes como navegadores da web enviam solicitações ao servidor da web, 
