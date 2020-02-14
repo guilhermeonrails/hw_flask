@@ -23,15 +23,12 @@ def index():
 app.add_url_rule('/', 'index', index)
 
 """
-Clientes como navegadores da web enviam solicitações ao servidor da web, 
-que por sua vez as envia para a instância do aplicativo Flask.
+O exemplo anterior registra a função index () como o manipulador do URL 
+raiz do aplicativo.
 
-A instância do aplicativo Flask precisa saber qual código precisa ser 
-executado para cada URL solicitada, para manter um mapeamento de URLs 
-para as funções do Python. A associação entre uma URL e a função que 
-lida com ela é chamada de rota
+Enquanto o decorador app.route é o método preferido para registrar funções 
+de exibição, o Flask também oferece uma maneira mais tradicional de configurar 
+as rotas de aplicativos com o método app.add_url_rule()
 
-Decoradores são um recurso padrão da linguagem Python. 
-Um uso comum de decoradores é registrar funções como funções de 
-manipulador a serem chamadas quando certos eventos ocorrerem.
+usa três argumentos: a URL, o endpoint name e a função view. 
 """
